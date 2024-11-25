@@ -4,18 +4,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');
 
 /* Background */
-:root {
-  font-family: 'Fira Code', monospace;
-  font-feature-settings: 'calt' 1;
-}
-:root p {
-  font-size: 32px;
-}
-
-:root .footnote {
-  font-size: 18px;
-  color: var(--noraj)
-}
 :root.invert {
   --noraj: #02c797;
   --color-background: #1c052b;
@@ -45,6 +33,20 @@
   background-size: 3em 3em;
   background-color: var(--color-background);
   */
+}
+
+:root {
+  font-family: 'Fira Code', monospace;
+  font-feature-settings: 'calt' 1;
+}
+
+:root .footnote {
+  font-size: 18px;
+  color: var(--noraj)
+}
+
+:root p {
+  font-size: 32px;
 }
 
 /* Titles */

@@ -51,6 +51,51 @@ lead dev @ ADP
 
 ##### Glossário (1)
 
-- **I.A.**: Inteligência Artificial
+**I.A.: Inteligência Artificial**
 
-Campo amplo que busca criar sistemas capazes de executar tarefas que normalmente requerem inteligência humana, como aprendizado, raciocínio e tomada de decisão.
+- um dos campos pioneiros da ciência da computação;
+- trata de estudos e práticas que possibilitam a criação de sistemas que simulem a inteligência humana;
+- ***exemplos**: reconhecimento de voz, visão computacional, processamento de linguagem natural, etc.*
+
+---
+
+##### Glossário (2)
+
+**Machine Learning**
+
+- campo de estudo mais restrito, dentro do guarda-chuva da I.A.;
+- trata de estudos e práticas que possibilitam a criação de sistemas que aprendem com dados;
+- ***exemplos**: classificação de imagens, previsão de séries temporais, etc.*
+
+---
+
+##### Glossário (3)
+
+**Deep Learning**
+
+- subcampo do Machine Learning;
+- trata de estudos e práticas que possibilitam a criação de sistemas que aprendem com dados, mas com redes neurais profundas;
+- ***exemplos**: reconhecimento de imagens, tradução automática, etc.*
+
+---
+
+##### Glossário (4)
+
+**LLM — Large Language Models**
+
+- subcampo do Deep Learning;
+- são modelos de redes neurais que aprendem com grandes quantidades de texto;
+- ***exemplos**: GPT-4, Gemini, Llama, etc.*
+
+---
+
+##### Glossário (5)
+
+```mermaid[mermaid image]
+
+graph TD
+  A[I.A.] --> B[Machine Learning]
+  B --> C[Deep Learning]
+  C --> D[LLM]
+
+```
