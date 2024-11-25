@@ -1,0 +1,4 @@
+{"rule":"ABREVIATIONS_PUNCTUATION","sentence":"^\\QIsso mesmo: tipos, console.log() e código com chaves!\\E$"}
+{"rule":"BARBARISMS","sentence":"^\\Qlead dev @ ADP\\E$"}
+{"rule":"ABREVIATIONS_PUNCTUATION","sentence":"^\\Qlead dev @ ADP\\E$"}
+{"rule":"BARBARISMS","sentence":"^\\QTalk is cheap, show me the code!\\E$"}
