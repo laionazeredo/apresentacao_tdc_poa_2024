@@ -89,13 +89,34 @@ lead dev @ ADP
 
 ---
 
+##### Relação entre os campos
+
+![width:500px](./assets/relacao_entre_IA_e_seus_sub_temas.svg)
+
+---
+
 ##### Glossário (5)
 
-```mermaid[mermaid image]
+**Data Science**
 
-graph TD
-  A[I.A.] --> B[Machine Learning]
-  B --> C[Deep Learning]
-  C --> D[LLM]
+- campo de estudo que trata da análise de dados;
+- utiliza técnicas de estatística, matemática e programação para extrair informações de dados;
+- tenta criar modelos preditivos ou descritivos a partir dos dados;
+- **atividades comuns**: modelagem estatística, machine learning, visualização de dados, etc.*;
 
-```
+___
+
+##### Glossário (6)
+
+**Data Analysis**
+
+- subcampo do Data Science;
+- trata da análise de dados;
+- tenta responder perguntas específicas sobre os dados;
+- **atividades comuns**: coleta, limpeza, análise, visualização e interpretação de dados;
+
+---
+
+##### Relação entre os campos
+
+![width:500px](./assets/relacao_entre_data_science_e_seus_sub_temas.svg)
