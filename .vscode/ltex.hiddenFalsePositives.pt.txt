@@ -2,3 +2,4 @@
 {"rule":"BARBARISMS","sentence":"^\\Qlead dev @ ADP\\E$"}
 {"rule":"ABREVIATIONS_PUNCTUATION","sentence":"^\\Qlead dev @ ADP\\E$"}
 {"rule":"BARBARISMS","sentence":"^\\QTalk is cheap, show me the code!\\E$"}
+{"rule":"SEMICOLON_COLON_SPACING","sentence":"^\\Qwidth:500px\\E$"}
