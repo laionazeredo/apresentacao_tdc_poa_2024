@@ -194,9 +194,28 @@ ___
 
 ---
 
-##### Principais Features
+##### Mas o Python não está sozinho...
 
-- baixo custo de entrada...
+|<p>Ecossistema</p>| <p>Curva</p> | <p>Libs</p> | <p>Comunidade</p> | <p>Performance</p> |
+| --- | --- | --- | --- | --- |
+| Python | ⬇️ | ⬆️ | ⬆️ | ⬇️|
+| Julia | ⬇️ | ⬆️ | ⬇️ | ⏺️
+| Mojo | ⬇️ | ⬆️ | ⬇️ | ⬆️
+| R | ⏺️ | ⏺️ | ⏺️ |⏺️
+| Rust | ⬆️ | ⬇️ | ⬇️ | ⬆️
+
+---
+
+##### Ou seja...
+
+A combinação de um ecossistema de Libs grande e abrangente, com uma comunidade grande, pujante e uma barreira de entrada na linguagem baixa (sintaxe simples, linguagem interpretada, etc.) **fazem do python o principal ecossistema para desenvolvimento de IA atualmente.**
+
+Isso apesar das suas fragilidades, como falta de segurança de *runtime*, baixo desempenho e não ser nativa da *Web.*
+
+<p style='font-size: 14px;'>(1) Devemos levar em conta que todas essas fragilidades estão sendo endereçadas pela comunidade. A falta de segurança de runtime já é amenizada com as *type annotations*, a baixa performance vai ser melhorada com a remoção do GIL e a integração com a Web é viável com o uso de *webassembly*.</p>
+
+___
+python é a linguagem de facto, ok...mas e quem vem da Web..precisa aprender python necessariamente para desenvolver aplicacoes que embarcam IA ou desenvolver seus produtos baseados em modelos proprios?
 
 ---
 
@@ -211,10 +230,6 @@ ___
 
 ##### Uma stack possível
 
-
----
-
-##### Ecossistema JS/TS atual
 
 ---
 
