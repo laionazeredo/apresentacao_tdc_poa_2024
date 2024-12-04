@@ -5,6 +5,8 @@ class: invert
 paginate: true
 header: 'I.A. Full Cycle com TypeScript'
 footer: 'Laion Azeredo - 2024'
+
+export_to_pdf: npx @marp-team/marp-cli --theme ./themes/cybertopia-laion.css ia_fullcycle_com_typescript.md -o ia_fullcycle_com_typescript.pdf --allow-local-files
 ---
 
 # I.A. Full Cycle com TypeScript
@@ -37,124 +39,13 @@ lead dev @ ADP
 
 ##### Agenda
 
-- Glossário
 - Porque Python domina o campo de I.A.
-- O *landscape* de ecossistemas para I.A.
 - JS/TS e I.A.: O Ecossistema atual
 - *Talk is cheap, show me the code!*
-  - Data Science com Jupyter, Deno e Danfo.js
+  - *Data wrangling* com Jupyter, Deno e Danfo.js
   - Machine Learning com TensorFlow.js
   - Webapp com Deno Fresh e TensorFlow.js
   - Deploy com Deno Deploy
-
----
-
-##### Glossário (1)
-
-**I.A.: Inteligência Artificial**
-
-- um dos campos pioneiros da ciência da computação;
-- trata de estudos e práticas que possibilitam a criação de sistemas que simulem a inteligência humana;
-- É um campo bastante abrangente e multidisciplinar;
-- ***exemplos**: reconhecimento de voz, visão computacional, processamento de linguagem natural, modelos preditivos e classificatórios em geral, etc.*
-
----
-
-##### Glossário (2)
-
-**Machine Learning**
-
-- campo de estudo mais restrito, no guarda-chuva da I.A.;
-- trata de estudos e práticas que possibilitam a criação de sistemas que aprendem com dados;
-- são ideais para a criação de modelos classificatórios e preditivos para a maioria dos fenômenos;
-- ***exemplos**: classificação de imagens, previsão de séries temporais, etc.*
-
----
-
-##### Glossário (3)
-
-**Deep Learning**
-
-- subcampo do Machine Learning;
-- trata de estudos e práticas que possibilitam a criação de sistemas que aprendem com dados, mas com redes neurais profundas;
-- são ideais para atividades de aprendizado complexas como reconhecimento de imagem;
-- ***exemplos**: reconhecimento de imagens, tradução automática, etc.*
-
----
-
-##### Glossário (4)
-
-**LLM — Large Language Models**
-
-- subcampo do Deep Learning;
-- são modelos de redes neurais que aprendem com grandes quantidades de texto;
-- tem ganhado popularidade por permitir uma ‘interface’ amigável para humanos interagirem com esta classe de modelos;
-- ***exemplos**: GPT-4, Gemini, Llama, etc.*
-
----
-
-##### Relação entre os campos
-
-![width:500px](./assets/relacao_entre_IA_e_seus_sub_temas.svg)
-
----
-
-##### Glossário (5)
-
-**Data Science**
-
-- campo de estudo que trata da análise de dados para modelar relações entre eles;
-- utiliza técnicas de estatística, matemática e programação para extrair informações de dados;
-- tenta criar modelos preditivos ou descritivos a partir dos dados;
-- **atividades comuns**: modelagem estatística, *machine learning*, visualização de dados, etc.*;
-
-___
-
-##### Glossário (6)
-
-**Data Analysis**
-
-- subcampo do Data Science;
-- trata da limpeza, organização e análise exploratória de dados;
-- não se preocupa tanto com predições sobre a evolução dos fenômenos estudados;
-- **atividades comuns**: coleta, limpeza, análise, visualização e interpretação de dados;
-
----
-
-##### Relação entre os campos
-
-![width:500px](./assets/relacao_entre_data_science_e_seus_sub_temas.svg)
-
----
-##### IA Full Cycle
-
-![width:1100px](./assets/ia_full_cycle.svg)
-
-<a style='font-size: 14px;' href='https://www.datacamp.com/blog/machine-learning-lifecycle-explained'>Fonte: DataCamp</a>
-
----
-##### IA Full Cycle - Stack
-
-![width:1100px](./assets/ia_full_cycle_stack.svg)
-
-
----
-
-##### IA Full Cycle - Complexidade
-
-![width:1100px](./assets/ia_full_cycle_complexidade.svg)
-
----
-
-### Programming Should be Simple!
-Ryan Dahl (2024)
-
-___
-
-##### Python e IA
-
- - E talvez essa frase explique, em partes, porque [Python é o ecossistema mais popular para IA e *machine learning*](https://www.sitepoint.com/best-programming-language-for-ai/);
- - A evolução das bibliotecas do Python para a área científica nos aponta um caminho para explicar essa popularidade;
 
 ---
 
@@ -167,15 +58,15 @@ ___
 
 ##### Uma breve história de Python ♥️ IA (2)
 
-- Principalmente após a publicação do Python 2.0, a linguagem começa a se tornar bastante popular entre a comunidade Linux, principalmente para a programação de utilitrários;
-- Mas a principal *virada de chave* para a adoção do Python no ramo científico foi o lançamento do [**Numpy**](https://numpy.org/) em 2005;
+- Principalmente após a publicação do Python 2.0, a linguagem começa a se tornar bastante popular entre a comunidade Linux, em especial para a programação de utilitários;
+- Mas a *virada de chave* para a adoção do Python no ramo científico foi o lançamento do [**Numpy**](https://numpy.org/) em 2005;
 
 ---
 
 ##### Uma breve história de Python ♥️ IA (3)
 
-- O Numpy traz para o jogo estruturas de dados novas para lidar de modo eficiênte com arrays multidimensionais e operações matemáticas complexas;
-- Com um *backend* em **C** (para a maioria das operações com arrays) e **Fortran** (para a parte de Algebra Linear, em especial), a performance do Numpy associada com a simplicidade do Python fizeram o ecossistema crescer exponencialmente na comunidade científica;
+- O Numpy traz para o jogo estruturas de dados novas para lidar de modo eficiente com arrays multidimensionais e operações matemáticas complexas;
+- Com um *backend* em **C** (para a maioria das operações com arrays) e **Fortran** (para a parte de Algebra Linear, em especial), o desempenho do Numpy, associado com a simplicidade do Python, fizeram o ecossistema crescer exponencialmente na comunidade científica;
 
 ---
 
@@ -188,7 +79,7 @@ ___
 ##### Uma breve história de Python ♥️ IA (5)
 
 - Ainda em 2005, o **SciPy** consolida sua infraestrutura em torno do Numpy;
-- Em 2007 temos o lançamento do **scikit-learn**, trazendo diversos algorítmos de *machine learning* com uma interface amigável e eficiênte;
+- Em 2007 temos o lançamento do **scikit-learn**, trazendo diversos algoritmos de *machine learning* com uma interface amigável e eficiente;
 - Em 2008 chega o **Pandas** e seu *Dataframe* para lidar com dados tabulares;
 - Entre 2015 e 2016 temos **TensorFlow** e **PyTorch** que trazem *deep learning* de modo acessível para a comunidade;
 
@@ -196,60 +87,131 @@ ___
 
 ##### Mas o Python não está sozinho...
 
-|<p>Ecossistema</p>| <p>Curva</p> | <p>Libs</p> | <p>Comunidade</p> | <p>Performance</p> |
-| --- | --- | --- | --- | --- |
-| Python | ⬇️ | ⬆️ | ⬆️ | ⬇️|
-| Julia | ⬇️ | ⬆️ | ⬇️ | ⏺️
-| Mojo | ⬇️ | ⬆️ | ⬇️ | ⬆️
-| R | ⏺️ | ⏺️ | ⏺️ |⏺️
-| Rust | ⬆️ | ⬇️ | ⬇️ | ⬆️
+| <p>Ecossistema</p> | <p>Curva</p> | <p><i>Libs</i></p> | <p>Comunidade</p> | <p>Performance</p> |
+| ------------------ | ------------ | ----------- | ----------------- | ------------------ |
+| Python             | ⬇️            | ⬆️           | ⬆️                 | ⬇️                  |
+| Julia              | ⬇️            | ⬆️           | ⬇️                 | ⏺️                  |
+| Mojo               | ⬇️            | ⬆️           | ⬇️                 | ⬆️                  |
+| R                  | ⏺️           | ⏺️           | ⏺️                | ⏺️                 |
+| Rust               | ⬆️            | ⬇️           | ⬇️                 | ⬆️                  |
 
 ---
 
 ##### Ou seja...
 
-A combinação de um ecossistema de Libs grande e abrangente, com uma comunidade grande, pujante e uma barreira de entrada na linguagem baixa (sintaxe simples, linguagem interpretada, etc.) **fazem do python o principal ecossistema para desenvolvimento de IA atualmente.**
+A combinação de um ecossistema de *libs* grande e abrangente, com uma comunidade numerosa, pujante e uma barreira de entrada na linguagem baixa (sintaxe simples, linguagem interpretada, etc.) **fazem do python o principal ecossistema para desenvolvimento de IA atualmente.**
 
-Isso apesar das suas fragilidades, como falta de segurança de *runtime*, baixo desempenho e não ser nativa da *Web.*
-
-<p style='font-size: 14px;'>(1) Devemos levar em conta que todas essas fragilidades estão sendo endereçadas pela comunidade. A falta de segurança de runtime já é amenizada com as *type annotations*, a baixa performance vai ser melhorada com a remoção do GIL e a integração com a Web é viável com o uso de *webassembly*.</p>
-
-___
-python é a linguagem de facto, ok...mas e quem vem da Web..precisa aprender python necessariamente para desenvolver aplicacoes que embarcam IA ou desenvolver seus produtos baseados em modelos proprios?
+Mesmo considerando suas fragilidades, como baixa de segurança de *runtime*, baixo desempenho e não ser nativa da *Web.*
 
 ---
 
-##### E o ecosssitema JS/TS?
+# Conclusão
 
-___
+#### Para entrar no mundo de IA eu preciso saber Python.
+
+#### Ponto final!
+
+---
+
+# Obrigado!
+
+---
+
+# E o ecossistema JS/TS?
+
+---
+
+##### Dá para fazer *machine learning* com JavaScript?
+
+Não apenas dá como temos um ecossistema cada vez mais completo e abrangente no que tange às tarefas para analisar dados, treinar modelos e entregar *data apps*.
+
+---
+
+##### Machine Learning/ Deep Learning
+
+- **[TensorFlow.js](https://www.tensorflow.org/js?hl=pt-br)**: dispensa apresentações. Portado diretamente do Python, pode inclusive converter modelos compilados em Python para rodar em JS. É acelerado por WebGPU e pode rodar no *browser*;
+- **[WebDNN](https://mil-tokyo.github.io/webdnn/)**: biblioteca para executar redes neurais pré-compiladas diretamente no *browser*, com performance próxima a do servidor. Isso mesmo: exporte sua DNN do Keras ou qualquer outro *framework* e execute diretamente em um *React*, por exemplo;
+
+---
+
+##### Gráficos e Plotagem
+
+- **[Plotly JS](https://plotly.com/javascript/)**: talvez uma das *lib* de visualização de dados mais populares no mundo Python tem seu *porting* para JavaScript;
+- **[D3.js](https://d3js.org/)**: a *lib* *de facto* quando se pensa em visualização de dados no mundo JS. É a base para diversas outras (inclusive o Plotly) e oferece diversidade e customização quase infinitas;
+
+---
+
+##### Matemática e Estatística
+
+- **[Math.js](https://mathjs.org/index.html)**: biblioteca de matemática avançada com um *parser* de expressões bastante flexível. É praticamente um **Wolfram Alpha** dentro do seu código;
+- **[Numjs](https://github.com/grimmer0125/numjs?tab=readme-ov-file)**: é o Numpy em JS. Faça de tudo um pouco com `NdArrays`;
+
+---
+
+##### Processamento de Linguagem Natural
+
+- **[Natural](https://naturalnode.github.io/natural/)**: biblioteca com diversos utilitários para se trabalhar com linguagem natural, como tokenização, TF-IDS, N-gramas, distâncias entre *strings* e análise de sentimento;
+- **[Compromise](https://github.com/spencermountain/compromise)**: biblioteca incrível para manipulação e tratamento de texto, com uma interface intuitiva e *blaaazing-faaast*;
+
+---
+
+##### Dataframes e Data Wrangling
+
+- **[Danfo.js](https://danfo.jsdata.org/)**: imagine que Pandas, Matplotlib e TensorFlow tem um filho: esse é o Danfo. É uma *lib* de alta performance para manipulação de dataframes e tensores e plotagem básica de dados;
+- **[Arquero](https://idl.uw.edu/arquero/)**: *lib* bastante interessante para manipulação de dataframes, com uma sintaxe intuitiva e diversos utilitários que aumentam bastante a produtividade;
+- **[Pandas.js](https://stratodem.github.io/pandas.js-docs/#introduction)**: bom, o nome já diz tudo!
+
+---
 
 ##### Diferenciais do ecossistema JS/TS
 
+O JS/TS traz features bastante interessantes para o jogo quando se pensa em desenvolvimento de aplicações de inteligência ou intensiva em dados:
+
+- **Desempenho**: com WebGPU e WebAssembly, temos acesso a performance quase nativa;
+- **Abrangência**: js é a linguagem mais popular do mundo. Em geral, é mais fácil ensinar um *framework* para uma pessoa que ensinar uma linguagem do zero;
+- **Portabilidade**: Roda literalmente em qualquer lugar!
 
 ---
 
 ##### Uma stack possível
 
+- Deno com Jupyter Notebooks para análise de dados, data wrangling, aquisição de dados e treinamento do modelo.
+- Deno com Fresh para criação de aplicações *web* intensivas em dados rápidas e fácies de manter.
+- Deno Deploy para publicar a aplicação na Edge para maximizar a experiência do usuário.
+
+---
+
+##### WTF is [Deno](https://deno.com/)?
+
+![width:300px](./assets/Deno_Logo_2024.svg.png)
+
+Deno rainha! Node nadinha!
 
 ---
 
 ##### Desafios
 
+- Ecossistema insipiente;
+- Comunidade pequena;
+- Imagem não ser associada com essa categoria de problema;
+
 ---
 
 #### Vamos para a prática?
 
+- *Data wrangling* com Jupyter, Deno e Danfo.js
+- Machine Learning com TensorFlow.js
+- Webapp com Deno Fresh e TensorFlow.js
+- Deploy com Deno Deploy
+
+---
+# Link do Repo
+
+![width:400](./assets/TDC_POA_24_QR_Code.svg)
+
 ---
 
-##### Next slides
+# Obrigado
 
-- o ciclo de desenvolvimento de IA passa por data analysis, data science, machine learning ou deep learning
-- mas nao apenas isso, pois envolve tambem a parte de engenharia de software, como deploy, monitoramento, etc.
-- e a parte de infraestrutura, como cloud, containers, etc.
-- Um modelo que nao é entregue como produto de pouco adianta
-- Python domina o mercado de I.A. por ser uma linguagem de alto nível, com muitas bibliotecas e frameworks. O ecossistema ganha
-- Voce tem diversas opcoes de linguagens para I.A., como R, Julia, Mojo, Rust, Go, etc.
-- Mas na hora de entregar esses modelos pela web, voce ainda depende de JS/TS, tornando sua stack mais complexa.
-- Recentemente, o ecossistema de JS/TS para I.A. tem crescido, com bibliotecas como TensorFlow.js, Danfo.js, etc.
-- O que facilira a lógica de fullstack e fullcycle de I.A. com JS/TS
-- Vamos ver como isso funciona na prática
+- [linkedin.com/in/laion-azeredo](https://www.linkedin.com/in/laion-azeredo/)
+- [https://github.com/laionazeredo](https://github.com/laionazeredo)
